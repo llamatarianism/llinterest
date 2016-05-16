@@ -1,12 +1,7 @@
-# Llinterest #
+# Llinterest
 
-## Build & Run ##
+## What is Llinterest?
 
-```sh
-$ cd Llinterest
-$ ./sbt
-> jetty:start
-> browse
-```
+It's a Pinterest clone.
 
-If `browse` doesn't launch your browser, manually open [http://localhost:8080/](http://localhost:8080/) in your browser.
+I am a man of few words.
