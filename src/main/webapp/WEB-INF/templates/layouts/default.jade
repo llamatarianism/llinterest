@@ -1,12 +1,18 @@
--@ val title: String
--@ val headline: String = title
--@ val body: String
-
-!!!
+doctype html
 html
   head
-    title= title
+    link(href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css')
+    block title
   body
-    #content
-      h1= headline
-      != body
+    div(class="container")
+      div(class="navbar navbar-default navbar-fixed-top")
+        a(href="/" id="home") Llinterest
+        a(href="/recent") Recent
+        a(href="/foo") Foo
+      div(class="row")
+        div(class="col-md-10 col-md-offset-1")
+          block header
+          block content
+        div(class="col-md-10 col-md-offset-1" id="foot")
+          a(href="https://github.com/llamatarianism") Made by Llamatarianism
+          a(href="http://scalatra.org/") Powered by Scalatra

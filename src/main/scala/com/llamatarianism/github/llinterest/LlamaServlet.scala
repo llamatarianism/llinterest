@@ -2,15 +2,14 @@ package com.llamatarianism.github.llinterest
 
 import org.scalatra._
 
-class LlamaServlet extends LlinterestStack {
+class LlamaServlet extends LlinterestStack with ScalateSupport {
+
+  before() {
+    contentType = "text/html"
+  }
 
   get("/") {
-    <html>
-      <body>
-        <h1>Hello, world!</h1>
-        Say <a href="hello-scalate">hello to Scalate</a>.
-      </body>
-    </html>
+    ssp("/index")
   }
 
 }
